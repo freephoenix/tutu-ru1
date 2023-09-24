@@ -1,3 +1,5 @@
+//Fizz-buzz задачи
+//Задача №1
 const dscount = (string, s1, s2)=>{
   const reg = new RegExp(s1+s2, 'ig');
   let last={index:-1}, c=-1;
@@ -8,7 +10,7 @@ const dscount = (string, s1, s2)=>{
   } while(last!==null);
   return c;
 }
-
+//Задача №2
 const checkSyntax = (string)=>{
   string = string.replace(/[^<[{\(>\]}\)]/g, '');
   const brackets = ['<>', '[]', '{}', '()'];
@@ -19,8 +21,8 @@ const checkSyntax = (string)=>{
   } while(/<>|\[\]|\{\}|\(\)/.test(string));
   return Number(string.length!==0);
 }
-
-//Алгоритмы. Задача №1
+//Алгоритмы
+//Задача №1
 //самое быстрое решение задачи:
 return (quantityOfPancackes>1) ? quantityOfPancackes : 2;
 //решение в виде алгоритма
@@ -30,7 +32,8 @@ return (quantityOfPancackes>1) ? quantityOfPancackes : 2;
   когда блинов стало 3, жарим 2 блина с первой стороны. Потом жарим 1й блин со второй стороны, а 3й - с первой. Наконец жарим 2й и 3й блины со второй стороны.
 */
 
-//Рефакторинг. Задача №1.
+//Рефакторинг
+Задача №1
 //упрощенный исходный код
 function func(s, a, b) {
 	if(s==='') return -1;
@@ -73,13 +76,14 @@ function func(s, a, b) {
 	return -1;
 }
 
-//Рефакторинг. Задача №2.
+//Задача №2
 function drawRating(vote) {
   vote = vote || 1;
   return String('★').repeat(Math.ceil(vote/20)).padEnd(5, '☆');
 }
 
-//Практические задачи. Задача №1.
+//Практические задачи
+Задача №1
 function parseUrl(string) {
   const [href, protocol, host, hostname, port, pathname, origin] = string.match(/(https?:)\/\/(([a-z\.]+):(\d+))(\/[a-z]+\/[a-z]+\.[a-z]+)[^]+(#[a-z\.]+)/);
   return {href:href, protocol:protocol, host:host, hostname:hostname, port:port, pathname:pathname, origin:origin};
